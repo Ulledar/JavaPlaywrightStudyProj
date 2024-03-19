@@ -2,7 +2,6 @@ package steps;
 import base.FrameworkConfig;
 import base.FrameworkInitialize;
 import config.ConfigReader;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.DataTableType;
