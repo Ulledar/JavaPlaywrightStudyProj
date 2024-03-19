@@ -2,10 +2,9 @@ package pages;
 
 import base.FrameworkConfig;
 import com.microsoft.playwright.Page;
-import com.microsoft.playwright.options.SelectOption;
 
 public class CreateUserPage {
-    Page page= FrameworkConfig.LocalPage;
+    Page page = FrameworkConfig.LocalPage;
 
     String txtName = "input[name=\"Name\"]";
     String txtSalary = "input[name=\"Salary\"]";

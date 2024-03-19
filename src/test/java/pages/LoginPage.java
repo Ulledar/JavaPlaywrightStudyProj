@@ -2,6 +2,7 @@ package pages;
 
 import base.FrameworkConfig;
 import com.microsoft.playwright.Page;
+import models.LoginModel;
 
 public class LoginPage {
 
@@ -12,9 +13,17 @@ public class LoginPage {
     String btnLogin = "input:text('Log in')";
 
 
-    public HomePage Login(String userName, String password) {
+    public HomePage login(String userName, String password) {
         page.fill(txtUserName, userName);
         page.fill(txtPassword, password);
+        page.click(btnLogin);
+
+        return new HomePage();
+    }
+
+    public HomePage login(LoginModel loginModel) {
+        page.fill(txtUserName, loginModel.getUserName());
+        page.fill(txtPassword, loginModel.getPassword());
         page.click(btnLogin);
 
         return new HomePage();

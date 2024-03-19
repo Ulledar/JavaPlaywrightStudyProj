@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 
 import base.TestBase;
 import org.testng.annotations.Test;
@@ -9,12 +9,24 @@ import static base.FrameworkConfig.*;
 public class FirstTest extends TestBase {
 
     @Test
+    public void testLogOff(){
+        LocalPage.navigate("http://eaapp.somee.com");
+
+        HomePage homePage = new HomePage();
+        var loginPage = homePage.ClickLogin();
+        homePage = loginPage.login("admin", "password");
+        homePage.ClickEmployeeList();
+
+        homePage.ClickLogOff();
+    }
+
+    @Test
     public void testLogin(){
         LocalPage.navigate("http://eaapp.somee.com");
 
         HomePage homePage = new HomePage();
         var loginPage = homePage.ClickLogin();
-        loginPage.Login("admin", "password");
+        homePage = loginPage.login("admin", "password");
         homePage.ClickEmployeeList();
 
         var createUserPage = homePage.ClickCreateNew();

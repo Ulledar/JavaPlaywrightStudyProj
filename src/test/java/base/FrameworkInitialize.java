@@ -11,9 +11,6 @@ import java.util.List;
 public class FrameworkInitialize {
 
     public Page InitializePlaywright(){
-        /*ConfigReader configs = new ConfigReader();
-        configs.PopulateSettings();*/
-        new ConfigReader().PopulateSettings();
 
         //Browser initialize
         BrowserInitialize browserInitialize = new BrowserInitialize();

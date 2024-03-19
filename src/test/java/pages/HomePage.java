@@ -15,7 +15,6 @@ public class HomePage {
 
     public LoginPage ClickLogin() {
         page.click(lnkLogin);
-
         return new LoginPage();
     }
 
@@ -25,9 +24,8 @@ public class HomePage {
 
     public CreateUserPage ClickCreateNew() {
         page.click(lnkCreateNew);
-
         return new CreateUserPage();
     }
-    
+
     public void ClickDelete() { page.click(btnDelete); }
 }

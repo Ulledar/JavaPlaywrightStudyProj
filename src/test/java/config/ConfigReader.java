@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class ConfigReader {
 
-    public void PopulateSettings() {
+    public static void PopulateSettings() {
         ConfigReader reader = new ConfigReader();
 
         try {
@@ -23,9 +23,8 @@ public class ConfigReader {
         p.load(inputStream);
 
         Settings.BrowserName = p.getProperty("BrowserName");
-        Settings.Headless = Boolean.getBoolean(p.getProperty("Headless"));
-        Settings.DevTools = Boolean.getBoolean(p.getProperty("DevTools"));
-        Settings.DeviceEmulationType = p.getProperty("DeviceEmulationType");
+        Settings.Headless = Boolean.parseBoolean(p.getProperty("Headless"));
+        Settings.DevTools = Boolean.parseBoolean(p.getProperty("DevTools"));
         Settings.Locale = p.getProperty("Locale");
     }
 }
