@@ -3,7 +3,6 @@ package base;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
-import config.ConfigReader;
 import config.Settings;
 
 import java.util.List;
